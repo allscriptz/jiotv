@@ -1,4 +1,4 @@
-<?php
+
 /* The following code retrieves the ssoToken in a Jio network that is useful in JioTV.
 
 Contributed by: allscripts@protonmail.com
@@ -23,5 +23,3 @@ $data = file_get_contents($API_TOKEN_URL,false,$context);
 $token=json_decode($data,true);
 
 echo $token["ssoToken"];
-
-?>
