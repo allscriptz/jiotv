@@ -1,7 +1,10 @@
 <?php
 
 /* The following code retrieves the m3u8 playlist from JioTV
-Replace http://url_to_token/ with the URL to token retrieved by JioAPI
+
+Replace http://url_to_token/ with the URL to jioToken.php
+The ssoToken can be used from your JioTV account.
+
 Usage format: http://localhost/m3u8.php?c=9XM&q=600
 
 Contributed by: allscripts@protonmail.com
