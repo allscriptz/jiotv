@@ -3,12 +3,17 @@
 Use it only for personal use. Mail to the address below for support, if necessary.
 Contributed by: allscripts@protonmail.com
 
+
 */
 
 
 package token;
 
 import token.aos;
+/*
+Taken from JioTV p000.aos
+*/
+
 import java.io.*;
 import java.net.*;
 
