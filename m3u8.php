@@ -2,8 +2,7 @@
 
 /* The following code retrieves the m3u8 playlist from JioTV
 
-Replace http://url_to_token/ with the URL to jioToken.php
-The ssoToken can be used from your JioTV account.
+Replace http://url_to_token/ with the URL to Jio token
 
 Usage format: http://localhost/m3u8.php?c=9XM&q=600
 
@@ -53,7 +52,10 @@ $hs= @preg_replace("/" . $_REQUEST["c"] . "_" . $_REQUEST["q"] ."-([^.]+\.)key/"
 //adds $p to the key url
 
 $hs= @preg_replace("/" . $_REQUEST["c"] . "_" . $_REQUEST["q"] ."-([^.]+\.)ts/", 'http://mumsite.cdnsrv.jio.com/jiotv.live.cdn.jio.com/'  . $_REQUEST["c"] . '/' .   $_REQUEST["c"] . '_' . $_REQUEST["q"] . '-\1ts', $hs);
+/*
+Proxy the .ts and .key files through file_get_contents() if needed
 
+*/
 
 echo $hs;
 
