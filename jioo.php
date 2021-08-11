@@ -1,10 +1,8 @@
 <?php
-
-/* The following code fetches the m3u8 from JioTV.
+/* The following code generates the token for JioTV.
 Use it only for personal use. Mail to the address below for support, if necessary.
 Contributed by: allscripts@protonmail.com
 */
-
 
 header("Content-Type: application/vnd.apple.mpegurl");
 header("Access-Control-Allow-Origin: *");
@@ -35,6 +33,7 @@ $hs = file_get_contents("http://gdcsite.cdnsrv.jio.com/jiotv.live.cdn.jio.com/" 
 
 $hs= @preg_replace("/" . $_REQUEST["c"] . "_" . $_REQUEST["q"] ."-([^.]+\.)key/", 'tests.php?id=0&key='  . $_REQUEST["c"] . '/' .   $_REQUEST["c"] . '_' . $_REQUEST["q"] . '-\1key', $hs);
 $hs= @preg_replace("/" . $_REQUEST["c"] . "_" . $_REQUEST["q"] ."-([^.]+\.)ts/", 'streamj.php?ts='  . $_REQUEST["c"] . '/' .   $_REQUEST["c"] . '_' . $_REQUEST["q"] . '-\1ts', $hs);
+//$hs= @preg_replace("/" . $_REQUEST["c"] . "_" . $_REQUEST["q"] ."-([^.]+\.)ts/", 'http://jiotv.live.cdn.jio.com/'  . $_REQUEST["c"] . '/' .   $_REQUEST["c"] . '_' . $_REQUEST["q"] . '-\1ts', $hs);
 
 $hs=str_replace("https://tv.media.jio.com/streams_live/" .  $_REQUEST["c"] . "/","",$hs);
 $hs = str_replace("https://tv.media.jio.com/streams_hotstar/" . $_REQUEST["c"] . "/","",$hs);

@@ -1,5 +1,5 @@
 <?php
-/* The following code fetches the m3u8 ts from JioTV.
+/* The following code generates the token for JioTV.
 Use it only for personal use. Mail to the address below for support, if necessary.
 Contributed by: allscripts@protonmail.com
 */
